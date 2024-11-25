@@ -1,12 +1,21 @@
 import React from "react";
-import { Text, View } from 'react-native'
+import Constants from "expo-constants";
+import { View, StyleSheet } from "react-native";
+import RepositoryList from "./RepositoryList";
 
 const Main = () => {
-  return (
-    <View>
-      <Text>Rate Repository Application</Text>
-    </View>
-  )
-}
+ return (
+  <View style={styles.container}>
+   <RepositoryList />
+  </View>
+ );
+};
 
-export default Main
+const styles = StyleSheet.create({
+ container: {
+  marginTop: Constants.statusBarHeight,
+  flexGrow: 1,
+ },
+});
+
+export default Main;
