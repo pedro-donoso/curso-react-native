@@ -1,13 +1,12 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native'
+import {View, StyleSheet} from 'react-native'
 import StyledText from './StyledText';
 
 const RepositoryItem = (props) => (
 <View key={props.id} style={styles.container}>
-  <StyledText big bold>id: {props.id}</StyledText>
-  <StyledText blue>FullName: {props.fullName}</StyledText>
-  <StyledText bold>Description: {props.description}</StyledText>
-  <StyledText blue>Language: {props.language}</StyledText>
+  <StyledText fontSize='subheading' fontWeight='bold'>{props.fullName}</StyledText>
+  <StyledText bold>{props.description}</StyledText>
+  <StyledText blue>{props.language}</StyledText>
   <StyledText small>Stars: {props.stargazersCount}</StyledText>
   <StyledText small>Forks: {props.forksCount}</StyledText>
   <StyledText small>Review: {props.reviewCount}</StyledText>
