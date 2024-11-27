@@ -4,14 +4,16 @@ import StyledText from "./StyledText";
 import RepositoryStats from "./RepositoryStats";
 import theme from "../theme";
 
-const RepositoryItemHeader = (props) => (
- <View>
-  <Image style={styles.image} source={{ uri: props.ownerAvatarUrl }} />
-  <StyledText fontSize="subheading" fontWeight="bold">
-   {props.fullName}
-  </StyledText>
-  <StyledText>{props.description}</StyledText>
-  <StyledText style={styles.language}>{props.language}</StyledText>
+const RepositoryItemHeader = ({ ownerAvatarUrl, fullName, description, language }) => (
+ <View style={{ flexDirection: 'row', paddingBottom: 2 }}>
+  <View style= {{ paddingRight: 10 }}>
+    <Image style={styles.image} source={{ uri: ownerAvatarUrl }} />
+  </View>
+    <View style={{ flex: 1}}>
+      <StyledText fontSize="subheading" fontWeight="bold">{fullName}</StyledText>
+    <StyledText>{description}</StyledText>
+    <StyledText style={styles.language}>{language}</StyledText>
+    </View>
  </View>
 );
 
