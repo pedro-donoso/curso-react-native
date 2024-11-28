@@ -5,7 +5,7 @@ import AppBar from './AppBar'
 
 const Main = () => {
  return (
-  <View style={{ flexGrow: 1 }}>
+  <View style={{ flex: 1 }}>
     <AppBar />
    <RepositoryList />
   </View>
