@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
     paddingLeft: 10
   },
   text: {
-    color: theme.appBar.primaryText
+    color: theme.appBar.textPrimary 
   } 
 })
 
@@ -25,3 +25,5 @@ const AppBar = () => {
     </View>
   )
 }
+
+export default AppBar
